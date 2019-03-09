@@ -48,11 +48,12 @@ end
 end
 
 def get_average_age_for_season(data, season)
-  answer=[]
+  total=[]
+  avergage = []
   data[season].each do |season_data| 
       answer.push(season_data.values_at("age").join.to_f)
       binding.pry
     end   
-  return (answer.inject {|a,b| a + b} / answer.length).round
+  average = total.sum / total.size.to_f
  end
 
